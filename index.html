@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact form</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <form
+        action="/submit"
+        method="POST"
+        id="contact-form"
+        aria-labelledby="contact-form"
+      >
+        <h1 id="contact-form">Contact Us</h1>
+        <br />
+        <label for="firstName">First Name *</label><br />
+        <input
+          type="text"
+          id="firstName"
+          name="firstName"
+          required
+          aria-required="true"
+          aria-describedby="firstNameError"
+        />
+        
+        <div class="error" id="firstNameError"></div>
+        <div class="last">
+          <label for id="lastName">Last Name *</label><br />
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            required
+            aria-required="true"
+            aria-describedby="lastNameError"
+          /><br />
+        </div>
+
+        <div class="error" id="lastNameError"></div>
+
+        <label for="emailAddress">Email Address *</label><br />
+        <input
+          type="email"
+          id="emailAddress"
+          name="emailAddress"
+          required
+          aria-required="true"
+          aria-describedby="emailError"
+        />
+        <div class="error" id="emailError"></div>
+
+        /><br /><br />
+
+        <legend>Query Type</legend>
+        <br /><br />
+
+        <label id="query">
+          <input
+            type="radio"
+            name="query-type"
+            value="general-enquiry"
+            required
+          />
+          General Enquiry
+        </label>
+
+        <label id="query1">
+          <input type="radio" name="query-type" value="support-request" />
+          Support Request
+        </label>
+        <div class="error" id="queryTypeError"></div>
+        <br /><br /><br />
+        <label for="message" class="message-label">Message</label><br />
+        <textarea id="message" name="message" required aria-required="true" aria-describedby="messageError"></textarea>></textarea><br /><br />
+        <div class="error" id="messageError"></div>
+        <label>
+          <input type="checkbox" name="consent" required aria-required="true" aria-describedby="consentError" />
+          I consent to being contacted by the team. </label
+        > <div class="error" id="consentError"></div><br /><br /><br />
+        <button type="submit">Submit</button>
+      </form>
+      <div id="toast" class="toast" role="alert" aria-live="assertive">Form submitted successfully!</div>
+    </main>
+    <script src="contact.js"></script>
+  </body>
+</html>
