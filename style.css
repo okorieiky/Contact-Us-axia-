@@ -28,114 +28,121 @@ main {
 }
 
 h1 {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 label {
-    font-size: 1.5rem;
-    color:  hsl(187, 24%, 22%);
+  font-size: 1.5rem;
+  color: hsl(187, 24%, 22%);
 }
 
-#firstName
-{
-  
+#firstName {
   font-size: 2rem;
-  padding: .5rem ;
+  padding: 0.5rem;
   border-radius: 0.5rem;
-  
 }
 .last {
-    position: relative;
+  position: relative;
 }
 
 #lastName {
-    position: absolute;
-    left:28.5rem;
-    bottom: 2.3rem;
-    font-size: 2rem;
-  padding: .5rem ;
+  position: absolute;
+  left: 28.5rem;
+  bottom: 2.3rem;
+  font-size: 2rem;
+  padding: 0.5rem;
   border-radius: 0.5rem;
 }
 
 #emailAddress {
-    font-size: 2rem;
-    padding: .5rem 14.7rem;
-    border-radius: .5rem;
+  font-size: 2rem;
+  padding: 0.5rem 14.7rem;
+  border-radius: 0.5rem;
 }
 legend {
-    font-size: 1.5rem;
-    font-weight: 400;
-    color:   hsl(187, 24%, 22%)
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: hsl(187, 24%, 22%);
 }
 
-#query{
-    border: 1px solid grey;
-    border-radius: .5rem;
-    padding: .5rem 6rem;
-    
+#query {
+  border: 1px solid grey;
+  border-radius: 0.5rem;
+  padding: 0.5rem 6rem;
 }
 
-#query1{
-    border: 1px solid grey;
-    border-radius: .5rem;
-    padding: .5rem 6rem;
-    margin-left: 3rem;
-}
-
-#message {
-    border: 1px solid grey;
-    border-radius: 0.5rem;
-    padding: 5rem 18rem;
-}
-
-button {
-    background-color: hsl(169, 82%, 27%);
-    padding: 1.2rem 24.5rem;
-    border-radius: .5rem;
-    color: white;
-} 
-
-
-@media screen and (max-width: 767px) {
-  html {
-    font-size: 50%; /* Adjust font size for smaller screens */
-}
-
-main {
-  padding: 1.5rem;
-  width: 100%; /* Ensure form takes up full width of screen */
-}
-
-h1 {
-  font-size: 2rem; /* Smaller header font for smaller screens */
-}
-
-label {
-  font-size: 1.3rem; /* Smaller label font for readability */
-}
-
-input,
-textarea {
-  font-size: 1.6rem; /* Slightly smaller text for form elements */
-}
-
-#firstName,
-#lastName {
-  display: block;
-  width: 100%; /* Stack form fields vertically */
-  margin-right: 0;
-}
-
-#query,
 #query1 {
-  width: 100%; 
-  margin-right: 0;
-  display: block;
+  border: 1px solid grey;
+  border-radius: 0.5rem;
+  padding: 0.5rem 6rem;
+  margin-left: 3rem;
 }
 
 #message {
-  padding: 3rem; 
-  width: 100%;
+  border: 1px solid grey;
+  border-radius: 0.5rem;
+  padding: 5rem 18rem;
 }
 
 button {
-  padding: 1rem; }
+  background-color: hsl(169, 82%, 27%);
+  padding: 1.2rem 24.5rem;
+  border-radius: 0.5rem;
+  color: white;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  body {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem;
+  }
+
+  main {
+    width: 90%;
+    padding: 2rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  label {
+    font-size: 1.3rem;
+  }
+
+  #firstName,
+  #lastName,
+  #emailAddress,
+  #query,
+  #query1,
+  #message {
+    width: 100%;
+    font-size: 1.8rem;
+    padding: 1rem;
+  }
+
+  .last {
+    position: static;
+    margin-top: 1rem;
+  }
+
+  #lastName {
+    position: static;
+  }
+
+  #emailAddress {
+    padding: 1rem;
+  }
+
+  button {
+    width: 100%;
+    padding: 1.2rem;
+    text-align: center;
+  }
+  #query1 {
+    margin-left: 0;
+    margin-top: 1rem;
+    display: block;
+  }
+}
